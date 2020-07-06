@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Shopping list</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Список покупок</h1>
+        <input type="text" v-model="list" @keyup.enter="addList()">
+        <ul>
+            <li v-for="product in cart">{{product}}</li>
+        </ul>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                list: '',
+                cart: []
+            },
+            methods: {
+                addList: function() {
+                    if (this.list == 'песок') {
+                        this.list = 'сахар'
+                    }
+                    this.cart.push(this.list);
+                    this.list = '';
+                }
+
+            },
+        })
+    </script>
+
+</body>
+
+</html>
+</body>
+
+</html>
