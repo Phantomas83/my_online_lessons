@@ -1,0 +1,1 @@
+Geek Brains Academy small intensive lesson. Creating shopping cart by HTM/CSS/Vue.JS
